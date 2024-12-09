@@ -3,6 +3,7 @@ package main
 import (
 	"Program/database"
 	"Program/generateToken"
+	"Program/message"
 	"Program/refresh"
 	"Program/utilits"
 	"crypto/sha512"
@@ -76,8 +77,7 @@ func main() {
 		}
 
 		if !useIP {
-			// Отправляем сообщение на email
-			println("New ip!!!")
+			message.SendMessage()
 		}
 
 		if err != nil {
